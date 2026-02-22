@@ -1,0 +1,19 @@
+
+The GPIO Music Box consists of multiple push-buttons connected to specific GPIO pins on
+the Raspberry Pi. Each button serves as a digital input device that sends a LOW signal to the
+Pi when pressed. The Python code continuously monitors these input signals, and upon
+detecting a press event, it triggers the playback of a corresponding sound file.
+In this configuration, one side of each button is connected to a GPIO pin, while the other is
+grounded. The Raspberry Pi’s internal pull-up resistors are activated in software to maintain a
+stable HIGH signal when buttons are not pressed, thereby avoiding floating states. When the
+button is pressed, the circuit completes, and the pin reads a LOW signal, which the program
+interprets as a trigger for playing sound.
+A sample mapping may include:
+• GPIO 17 → Drum Sound
+• GPIO 4 → Cymbal Sound
+• GPIO 27 → Snare Sound
+• GPIO 10 → Crash Sound
+Speakers or headphones are connected to the Raspberry Pi’s audio output port to reproduce the
+sound output. The circuit is assembled on a breadboard to facilitate easy connections and
+modifications. Once the wiring is complete, the Raspberry Pi is powered on and ready for
+testing
