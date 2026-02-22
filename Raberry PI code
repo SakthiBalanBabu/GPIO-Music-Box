@@ -1,0 +1,27 @@
+# GPIO Music Box
+# Raspberry Pi Project
+# Author: [Your Name]
+# Date: [Insert Date]
+from gpiozero import Button
+import pygame
+from signal import pause
+# Initialize the audio mixer
+pygame.mixer.init()
+# Load sound files
+drum = pygame.mixer.Sound("samples/drum.wav")
+cymbal = pygame.mixer.Sound("samples/cymbal.wav")
+snare = pygame.mixer.Sound("samples/snare.wav")
+crash = pygame.mixer.Sound("samples/crash.wav")
+# Define buttons and GPIO pin numbers
+btn1 = Button(17)
+btn2 = Button(4)
+btn3 = Button(27)
+btn4 = Button(10)
+# Assign button actions
+btn1.when_pressed = drum.play
+btn2.when_pressed = cymbal.play
+btn3.when_pressed = snare.play
+btn4.when_pressed = crash.play
+print("GPIO Music Box ready. Press buttons to play sounds.")
+# Wait for button press events
+pause()
