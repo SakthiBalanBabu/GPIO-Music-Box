@@ -1,0 +1,17 @@
+Hardware Requirements
+• Raspberry Pi (Model 3B+, 4, or Zero W)
+• Breadboard
+• 4 to 6 tactile push-buttons
+• Jumper wires (male-to-male and male-to-female)
+• Resistors (optional for pull-down configuration)
+• Speaker or headphone output
+• MicroSD card with Raspberry Pi OS
+• 5V power supply for Raspberry Pi
+Software Requirements
+• Raspberry Pi OS (Bullseye or later)
+• Python 3
+• Libraries: gpiozero, pygame
+• Preloaded sound samples in .wav or .flac format
+Installation command:
+sudo apt update
+sudo apt install python3-gpiozero python3-pygame
